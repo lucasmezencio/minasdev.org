@@ -94,6 +94,10 @@
                         <time itemprop="startDate" content="{{date}}" datetime="{{date}}" class="proximo-evento-date">{{moment(date).format("DD.MM")}}</time>
                         <h2 itemprop="name" class="proximo-evento-name" lang="en">{{name}}</h2>
 
+                        {% if (typeof community !== 'undefined') { %}
+                            <p itemprop="community" class="proximo-evento-comunidade">{{community}}</p>
+                        {% } %}
+
                         <div itemprop="location" itemscope itemtype="http://schema.org/PostalAddress">
                           <a href="{{local.googlemaps_link}}" itemprop="streetAddress" target="_blank" class="proximo-evento-text">{{local.name}} &#10144;</a>
                         </div>

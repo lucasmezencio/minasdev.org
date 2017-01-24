@@ -59,6 +59,7 @@ function renderTemplate(block, results, options, done) {
 
   $.each(results, function (i, event) {
     _.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
+    _.templateSettings.evaluate = /{%([\s\S]+?)%}/g;
 
     output += _.template(tpl, event);
 
